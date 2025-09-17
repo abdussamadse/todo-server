@@ -14,6 +14,7 @@ import {
   notFoundMiddleware,
 } from "./middlewares/error.middleware.js";
 import userRoutes from "./routes/user.routes.js";
+import todoRoutes from "./routes/todo.routes.js";
 
 const app = express();
 
@@ -72,6 +73,7 @@ app.get("/", (req, res) => {
 
 // User-related API routes
 app.use("/api/v1/users", userRoutes);
+app.use("/api/v1/todos", todoRoutes);
 
 // Catch all undefined routes and forward them to the error handler
 app.all("*", notFoundMiddleware);
