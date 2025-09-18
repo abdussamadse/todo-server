@@ -30,7 +30,7 @@ const limiter = rateLimit({
 });
 
 // Allowed origins for CORS
-const allowedOrigins = ["*", "http://localhost:5173", "http://localhost:5174"];
+const allowedOrigins = ["*", "http://localhost:5173", "http://localhost:5174", "http://localhost:8081"];
 app.use(
   cors({
     origin: function (origin, callback) {
